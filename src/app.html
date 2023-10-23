@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="dark:dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+
+		<script>
+			// Ponemos el tema por defecto de la máquina del user
+			if (
+				localStorage.theme === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+	<div class="hidden">
+		Image by
+		<a
+			href="https://www.freepik.com/free-vector/flat-sparkling-star-collection_15591195.htm#query=star&position=0&from_view=search&track=sph"
+			>Freepik</a
+		>Image by
+		<a href="https://www.freepik.com/free-vector/realistic-grainy-texture-design_22072325.htm"
+			>Freepik</a
+		>
+	</div>
+</html>

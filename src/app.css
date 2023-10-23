@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+	@font-face {
+		font-family: 'Basdela';
+		src: url(/fonts/basdela/Basdela.ttf);
+	}
+	:root,
+	.light {
+		--text: #010618;
+		--background: #e7ebfe;
+		--primary: #f81644;
+		--secondary: #d7dffe;
+		--accent: #40f812;
+		color-scheme: light;
+	}
+	.dark {
+		--text: #e7ecfe;
+		--background: #010518;
+		--primary: #e90734;
+		--secondary: #010928;
+		--accent: #35ed07;
+		color-scheme: dark;
+	}
+}
+
+@tailwind utilities;
+
+.parallax {
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.parallax__layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.parallax__layer--base {
+	transform: translateZ(0);
+}
+.parallax__layer--back {
+	transform: translateZ(-1px) scale(2);
+}
+.parallax__group {
+	position: relative;
+	height: 100vh;
+	transform-style: preserve-3d;
+}
