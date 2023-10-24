@@ -40,7 +40,7 @@
 	<div class="flex-1 justify-center flex">2023</div>
 	<div class="flex-1 justify-center flex">
 		<button
-			class="bg-primary text-text flex items-center justify-center p-2 rounded-full gap-2 hover:rotate-6 transition-all"
+			class="bg-secondary border-text border text-text flex items-center justify-center p-2 rounded-full gap-2 hover:rotate-6 transition-all"
 			>Contacto <span class="material-icons">add_ic_call</span></button
 		>
 	</div>

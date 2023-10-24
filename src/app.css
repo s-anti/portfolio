@@ -23,6 +23,37 @@
 		--accent: #35ed07;
 		color-scheme: dark;
 	}
+	:root {
+		--grain: url('/images/grain.png');
+	}
+	.purple-fade::before {
+		transform: translateZ(0);
+		position: absolute;
+		content: '';
+		z-index: 100;
+		top: 0;
+		left: 0;
+		right: -10%;
+		height: 500px;
+		width: 500px;
+		mix-blend-mode: color-dodge;
+		background: var(--grain),
+			radial-gradient(
+					circle farthest-corner at 0 0,
+					#3d1b6d 30%,
+					#e438dc 65%,
+					#404b8c 80%,
+					#79acbb 110%
+				)
+				no-repeat,
+			radial-gradient(closest-side at 60% 50%, #7f4dad 20%, #000 100%) no-repeat;
+		background-size: 140px, 100%, cover;
+		background-blend-mode: overlay;
+	}
+	.purple-fade {
+		position: relative;
+		top: 0;
+	}
 }
 
 @tailwind utilities;
